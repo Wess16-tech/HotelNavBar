@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Nav Bar</title>
     <style>
         body {
             margin: 0;
-            font-family:Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
+
         .topnav {
             overflow: hidden;
             background-color: #333;
         }
+
         .topnav a {
             float: left;
             color: #1affa3;
@@ -19,25 +22,209 @@
             text-decoration: none;
             font-size: 17px;
         }
+
         .topnav a:hover {
             background-color: #ddd;
             color: black;
         }
-        .topnav a.active{
+
+        .topnav a.active {
             background-color: #ffe066;
             color: black;
         }
+
+        /* Hide content by default */
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#">About</a>
-        <a href="#">Menu</a>
-        <a href="#">FoodGallery</a>
-        <a href="#">Contact_Us</a>
-        <a href="#">Feedback</a>
-        <a href="#">Login</a>
+        <a class="active" href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('menu')">Menu</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
     </div>
+
+    <div id="home" class="content-section">
+        <h1>🌟Welcome to Wess Haven!🌟</h1>
+        <p>
+            Step into Wess Haven, where every meal is an invitation to indulge, explore, and savor the beauty of great
+            food. Whether
+            you're here for a quick bite or a memorable evening, we offer a warm and welcoming atmosphere that feels
+            like home. From
+            the moment you walk through our doors, you’ll experience the passion and dedication behind every dish.
+        </p>
+    </div>
+
+    <div id="about" class="content-section">
+        <h1>🌟About Us🌟</h1>
+        <p>At Wess Haven, we believe that food is more than just a meal – it's an experience. Our cozy corner brings
+            together the
+            finest ingredients from around the world, served with a dash of innovation and a sprinkle of love. We’re not
+            just about
+            feeding you; we’re here to take you on a culinary adventure.</p>
+        <p>
+            Our chefs are passionate explorers of flavor, constantly experimenting with new techniques and combinations
+            to surprise
+            your taste buds. Whether you're joining us for a quick bite or a long, leisurely dinner, we promise to make
+            every moment
+            at our table memorable.
+        </p>
+        <p>
+            From locally sourced produce to globally inspired dishes, each plate at Wess Haven tells a story. Join us,
+            and let your
+            senses discover something extraordinary.
+        </p>
+    </div>
+
+    <div id="menu" class="content-section">
+        <h1>🌟 Wess Haven Hotel Menu 🌟</h1>
+        <p>An Exquisite Culinary Experience, Only at Wess Haven</p>
+
+        <h2>🥐 Breakfast (6:00 AM – 10:30 AM)</h2>
+        <ul>
+            <li><strong>Wess Haven Sunrise Platter</strong> – Scrambled eggs, bacon, sausage, roasted tomatoes,
+                croissant</li>
+            <li><strong>Golden Berry Pancakes</strong> – Pancakes with berry compote and honey - $12.99</li>
+            <li><strong>Truffle Egg Benedict</strong> – Poached eggs on English muffin with hollandaise</li>
+            <li><strong>Heavenly French Toast</strong> – Brioche slices with vanilla custard and maple syrup</li>
+            <li><strong>Avocado Royale Toast</strong> – Sourdough toast with avocado, poached eggs, feta </li>
+            <li><strong>Smoked Salmon & Bagel</strong> – Fresh bagel with cream cheese, smoked salmon </li>
+            <li><strong>Banana Nut Waffles</strong> – Waffles topped with caramelized bananas and pecans</li>
+            <li><strong>Cinnamon Apple Oatmeal</strong> – Oatmeal with caramelized apples and brown sugar </li>
+            <li><strong>Breakfast Burrito</strong> – Eggs, cheese, sausage, and salsa in a tortilla</li>
+            <li><strong>Protein Smoothie Bowl</strong> – Acai and banana smoothie with granola</li>
+        </ul>
+
+        <h2>🥂 Starters & Appetizers</h2>
+        <ul>
+            <li><strong>Signature Crab Cakes</strong> – Lump crab meat with citrus aioli</li>
+            <li><strong>Golden Haven Prawns</strong> – Tempura prawns with mango chutney</li>
+            <li><strong>Beef Carpaccio</strong> – Sliced raw beef with arugula and parmesan</li>
+            <li><strong>Baked Brie & Fig Jam</strong> – Warm brie with fig jam and baguette</li>
+            <li><strong>Stuffed Portobello Mushrooms</strong> – Mushrooms with ricotta, spinach</li>
+        </ul>
+
+        <h2>🍽️ Main Course</h2>
+        <ul>
+            <li><strong>Royal Steak</strong> – 12oz sirloin with herb butter, asparagus, mashed potatoes</li>
+            <li><strong>Ocean Delight</strong> – Lobster, prawns, scallops in saffron sauce</li>
+            <li><strong>Classic Beef Wellington</strong> – Filet mignon wrapped in puff pastry</li>
+            <li><strong>Black Truffle Risotto</strong> – Risotto with black truffle and parmesan</li>
+            <li><strong>Braised Lamb Shank</strong> – Slow-cooked lamb shank with mashed potatoes</li>
+        </ul>
+
+        <h2>👶 Kids' Menu</h2>
+        <ul>
+            <li><strong>Little Haven Sliders</strong> – Mini beef sliders with cheddar and fries</li>
+            <li><strong>Cheesy Mac & Cheese</strong> – Creamy macaroni with crispy topping </li>
+            <li><strong>Mini Pancake Stack</strong> – Pancakes with maple syrup and berries</li>
+            <li><strong>Grilled Chicken Bites</strong> – Tender grilled chicken with steamed veggies</li>
+            <li><strong>Kid’s Spaghetti & Meatballs</strong> – Pasta with tomato sauce and meatballs</li>
+        </ul>
+
+        <h2>🍸 Signature Cocktails</h2>
+        <ul>
+            <li><strong>Wess Haven Royale</strong> – Champagne, elderflower liqueur, pomegranate juice</li>
+            <li><strong>Golden Sunset Martini</strong> – Vodka, mango purée, lime juice, honey</li>
+            <li><strong>Celestial Old Fashioned</strong> – Bourbon, bitters, orange zest, maple syrup</li>
+        </ul>
+
+        <h2>🍹 Signature Mocktails</h2>
+        <ul>
+            <li><strong>Haven Breeze</strong> – Pineapple, coconut, pomegranate syrup</li>
+            <li><strong>Royal Blueberry Lemonade</strong> – Lemonade with a blueberry twist</li>
+            <li><strong>Emerald Mint Cooler</strong> – Cucumber, lime, mint, club soda</li>
+        </ul>
+
+        <h2>🍷 Wine Selection</h2>
+        <ul>
+            <li><strong>Dom Pérignon Vintage Brut</strong> (France) – Almond, citrus, brioche</li>
+            <li><strong>Cloudy Bay Sauvignon Blanc</strong> (New Zealand) – Citrus and tropical fruit</li>
+            <li><strong>Opus One</strong> (Napa Valley) – Dark fruit, chocolate notes</li>
+            <li><strong>Caymus Cabernet Sauvignon</strong> (USA) – Rich blackcurrant and cocoa</li>
+            <li><strong>Moët & Chandon Imperial</strong> (France) – Crisp and refreshing</li>
+        </ul>
+
+        <h2>🥤 Drinks</h2>
+        <ul>
+            <li><strong>Fresh Juices</strong> (Orange, Apple, Pineapple)</li>
+            <li><strong>Classic Soft Drinks</strong> (Coca-Cola, Sprite, Pepsi)</li>
+            <li><strong>Signature Coffee</strong> – Smooth blend with chocolate notes</li>
+            <li><strong>Espresso</strong> – Bold and rich - $4.99</li>
+            <li><strong>Cappuccino</strong></li>
+            <li><strong>Belgian Hot Chocolate</strong> – Thick, creamy, topped with whipped cream</li>
+        </ul>
+
+        <h2>🍵 Premium Teas & Infusions</h2>
+        <ul>
+            <li><strong>English Breakfast Tea</strong> – Classic black tea blend</li>
+            <li><strong>Jasmine Green Tea</strong> – Fragrant and calming</li>
+            <li><strong>Matcha Green Tea Latte</strong> – Creamy and antioxidant-rich</li>
+        </ul>
+
+
+    </div>
+
+    <div id="contact" class="content-section">
+           <h1><center>🌟Contact Us🌟</center></h1>
+            <p>We’d love to hear from you! Reach out to us through any of the following methods:</p>
+
+            <h3>Address</h3>
+            <p>Wess Haven Restaurant<br>
+                123 Gourmet Avenue<br>
+                Foodie City, Country</p>
+
+            <h3>Phone</h3>
+            <p>Restaurant Inquiries: +1 (234) 567-8902<br>
+                Reservations: +1 (234) 567-8903</p>
+
+            <h3>Email</h3>
+            <p>General Inquiries: <a href="mailto:info@wesshaven.com">info@wesshaven.com</a><br>
+                Reservations: <a href="mailto:reservations@wesshaven.com">reservations@wesshaven.com</a></p>
+
+            <h3>Contact Form</h3>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'block';
+
+            var links = document.querySelectorAll('.topnav a');
+            links.forEach(function (link) {
+                link.classList.remove('active');
+            });
+
+            var activeLink = document.querySelector('.topnav a[onclick="showSection(\'' + sectionId + '\')"]');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+
+        showSection('home');
+    </script>
 </body>
+
 </html>
